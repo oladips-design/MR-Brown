@@ -6,7 +6,9 @@ export default function Footer() {
       <footer className="footer">
         <ul className="footer__list">
           <li className="footer__link">
-            <a href="">linkedIn</a>
+            <a href="https://www.linkedin.com/in/aluko-brown/" target="blank">
+              linkedIn
+            </a>
           </li>
           <li className="footer__link">
             <a href="https://twitter.com/AlukoBrown" target="blank">
