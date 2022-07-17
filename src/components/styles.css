@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Black";
+  src: url(../fonts/SharpGroteskBlack20.woff);
+}
+@font-face {
+  font-family: "Bold";
+  src: url(../fonts/SharpGroteskBold20.woff);
+}
+@font-face {
+  font-family: "Book";
+  src: url(../fonts/SharpGroteskBook20.woff);
+}
+:root {
+  --strange-green: hsl(146, 92%, 5%);
+  --whiteish: #fffdeb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--strange-green);
+  overflow-x: hidden;
+  color: var(--whiteish);
+  /* display: none; */
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: var(--whiteish);
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c0cac4;
+  position: relative;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transition-duration: 0.1s;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cursorInner {
+  width: 10px;
+  height: 10px;
+  background-color: #c0cac4;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transition-duration: 0.05s;
+}
+
+.header {
+  width: 100%;
+  margin-top: 9rem;
+  text-align: center;
+}
+.header__hi {
+  font-family: "Bold";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.header__name {
+  margin-top: 4.5rem;
+  width: 100%;
+  font-family: "Black";
+  font-weight: 900;
+  line-height: 86.5%;
+  font-size: 8rem;
+}
+@media (min-width: 600px) {
+  .header__break {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  .header {
+    margin-top: 17rem;
+  }
+  .header__hi {
+    font-size: 4rem;
+  }
+  .header__name {
+    margin-top: 2.7rem;
+    font-size: 12rem;
+  }
+}
+
+.cursorInner,
+.cursor {
+  display: none;
+}
+@media (min-width: 650px) {
+  .cursorInner,
+  .cursor {
+    display: block;
+  }
+}
+
+.main {
+  width: 100%;
+  margin-top: 4rem;
+}
+.main__text {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+.main__para {
+  font-family: "Book";
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  text-align: center;
+  color: var(--whiteish);
+}
+.main__para:not(:first-child) {
+  margin-top: 3.5rem;
+}
+@media (min-width: 650px) {
+  .main {
+    margin-top: 4rem;
+  }
+  .main__text {
+    max-width: 55.2rem;
+  }
+  .main__para {
+    font-size: 1.6rem;
+  }
+  .main__para:not(:first-child) {
+    margin-top: 3.5rem;
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: 3.2rem;
+  margin-bottom: 4.9rem;
+}
+.footer__list {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.footer__link {
+  font-family: "Book";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+@media (min-width: 850px) {
+  .footer {
+    margin-top: 12rem;
+    margin-bottom: 3.9rem;
+  }
+  .footer__link {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+} /*# sourceMappingURL=styles.css.map */
